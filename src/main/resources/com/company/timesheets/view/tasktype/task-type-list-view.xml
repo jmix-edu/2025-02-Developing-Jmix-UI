@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <view xmlns="http://jmix.io/schema/flowui/view"
       title="msg://taskTypeListView.title">
-<!--      focusComponent="nameFilterField">-->
+    <!--      focusComponent="nameFilterField">-->
     <data readOnly="true">
         <collection id="taskTypesDc"
                     class="com.company.timesheets.entity.TaskType">
@@ -17,7 +17,7 @@
         <dataLoadCoordinator auto="true"/>
         <urlQueryParameters>
             <pagination component="pagination"/>
-            <genericFilter component="genericFilter"/>
+            <propertyFilter component="nameFilter"/>
         </urlQueryParameters>
     </facets>
     <actions>
@@ -25,11 +25,21 @@
         <action id="discardAction" type="lookup_discard"/>
     </actions>
     <layout>
-        <genericFilter id="genericFilter"
-                       dataLoader="taskTypesDl">
-            <properties include=".*"/>
-        </genericFilter>
 
+        <propertyFilter id="nameFilter"
+                        property="name"
+                        operation="CONTAINS"
+                        dataLoader="taskTypesDl"
+                        labelVisible="false"
+                        width="100%"
+                        maxWidth="30em">
+            <textField id="nameFilterField" placeholder="msg://nameFilter.placeholder" clearButtonVisible="true">
+                <prefix>
+                    <icon icon="SEARCH"/>
+                </prefix>
+            </textField>
+
+        </propertyFilter>
         <hbox id="buttonsPanel" classNames="buttons-panel">
             <button id="createBtn" action="taskTypesDataGrid.create"/>
             <button id="editBtn" action="taskTypesDataGrid.edit"/>
@@ -47,7 +57,7 @@
             </actions>
             <columns resizable="true">
                 <column property="name"/>
-                <column property="description"/>
+                <column property="description" flexGrow="2"/>
             </columns>
         </dataGrid>
         <hbox id="lookupActions" visible="false">

@@ -21,14 +21,24 @@
         <dataLoadCoordinator auto="true"/>
         <urlQueryParameters>
             <pagination component="pagination"/>
-            <genericFilter component="genericFilter"/>
+            <propertyFilter component="nameFilter"/>
         </urlQueryParameters>
     </facets>
     <layout>
-        <genericFilter id="genericFilter"
-                       dataLoader="clientsDl">
-            <properties include=".*"/>
-        </genericFilter>
+        <propertyFilter id="nameFilter"
+                        dataLoader="clientsDl" property="name"
+                        operation="CONTAINS"
+                        labelVisible="false"
+                        width="100%" maxWidth="30em">
+            <textField id="nameFilterField"
+                       placeholder="msg://nameFilter.placeholder"
+            clearButtonVisible="true">
+            <prefix>
+                <icon icon="SEARCH"/>
+            </prefix>
+        </textField>
+    </propertyFilter>
+
         <hbox id="buttonsPanel" classNames="buttons-panel">
             <button id="createBtn" action="clientsDataGrid.create"/>
             <button id="editBtn" action="clientsDataGrid.edit"/>

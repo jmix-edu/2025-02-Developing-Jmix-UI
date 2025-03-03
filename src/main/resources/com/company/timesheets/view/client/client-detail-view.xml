@@ -18,10 +18,31 @@
         <action id="closeAction" type="detail_close"/>
     </actions>
     <layout>
-        <formLayout id="form" dataContainer="clientDc">
-            <textField id="nameField" property="name"/>
-            <fileUploadField id="imageField" property="image" fileNameVisible="true"/>
-        </formLayout>
+        <vbox id="imageWrapper"
+              classNames="border rounded-m border-contrast-20"
+              alignItems="CENTER"
+              width="100%"
+              maxWidth="30em">
+            <image id="image" height="10em"
+                   dataContainer="clientDc" property="image"
+                   alternateText="msg://com.company.timesheets.entity/Client.image"/>
+            <hbox id="uploadWrapper" expand="imageField" width="100%">
+                <fileUploadField id="imageField"
+                                 dataContainer="clientDc"
+                                 property="image"
+                                 fileNameVisible="true"/>
+                <button id="uploadClearButton" icon="CLOSE_BIG">
+                    <tooltip text="msg://uploadClearButton.tooltip"/>
+                </button>
+            </hbox>
+        </vbox>
+        <textField id="nameField" dataContainer="clientDc" property="name"
+        label="msg://com.company.timesheets.entity/Client.name" width="100%" maxWidth="30em">
+            <prefix>
+                <icon icon="USER_CARD"/>
+            </prefix>
+        </textField>
+
         <details id="contactInformationDetails"
                  summaryText="msg://com.company.timesheets.entity/Client.contactInformation"
                  width="100%" opened="true">
