@@ -86,7 +86,7 @@ vaadin-login-form-wrapper::part(form){
 }
 
 vaadin-grid::part(open-project) {
-    color: var (--lumo-success-text-color)
+    color: var(--lumo-success-text-color)
 }
 
 vaadin-grid::part(closed-project) {

@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@polymer/polymer": "3.5.1",
+    "@vaadin-component-factory/vcf-pdf-viewer": "2.0.1",
     "@vaadin/bundles": "24.4.16",
     "@vaadin/common-frontend": "0.0.19",
     "@vaadin/polymer-legacy-adapter": "24.4.16",
@@ -17,7 +18,10 @@
     "ace-builds": "1.18.0",
     "construct-style-sheets-polyfill": "3.1.0",
     "date-fns": "2.29.3",
+    "jquery": "1.9.1",
+    "jquery-ui": "1.13.2",
     "lit": "3.1.4",
+    "print-js": "1.6.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "6.26.2"
@@ -45,6 +49,7 @@
   "vaadin": {
     "dependencies": {
       "@polymer/polymer": "3.5.1",
+      "@vaadin-component-factory/vcf-pdf-viewer": "2.0.1",
       "@vaadin/bundles": "24.4.16",
       "@vaadin/common-frontend": "0.0.19",
       "@vaadin/polymer-legacy-adapter": "24.4.16",
@@ -58,7 +63,10 @@
       "ace-builds": "1.18.0",
       "construct-style-sheets-polyfill": "3.1.0",
       "date-fns": "2.29.3",
+      "jquery": "1.9.1",
+      "jquery-ui": "1.13.2",
       "lit": "3.1.4",
+      "print-js": "1.6.0",
       "react": "18.3.1",
       "react-dom": "18.3.1",
       "react-router-dom": "6.26.2"
@@ -83,7 +91,7 @@
       "workbox-core": "7.3.0",
       "workbox-precaching": "7.3.0"
     },
-    "hash": "643f37e0385e78cfb4bb3eb403fbe7733b7debe4c65b70121b3f25d2ac95d197"
+    "hash": "4138226555ae50b63b5ae60884177900fb7accb5441ce5fa9034272409000e5c"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -103,6 +111,10 @@
     "@vaadin/vaadin-themable-mixin": "$@vaadin/vaadin-themable-mixin",
     "ace-builds": "$ace-builds",
     "@vaadin/vaadin-lumo-styles": "$@vaadin/vaadin-lumo-styles",
-    "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles"
+    "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
+    "jquery-ui": "$jquery-ui",
+    "jquery": "$jquery",
+    "print-js": "$print-js",
+    "@vaadin-component-factory/vcf-pdf-viewer": "$@vaadin-component-factory/vcf-pdf-viewer"
   }
 }

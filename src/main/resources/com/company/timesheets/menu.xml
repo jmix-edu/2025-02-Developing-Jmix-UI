@@ -8,12 +8,16 @@
         <item view="ts_Task.my" description="msg://com.company.timesheets/menu_config.ts_Task.my.description"
               title="msg://com.company.timesheets/menu_config.ts_Task.my.title"/>
         <item view="ts_AsyncTasksView" title="msg://com.company.timesheets.view.asynctasks/asyncTasksView.title"/>
+        <item view="ts_PreviePdf" title="msg://com.company.timesheets.view.previepdf/previePdf.title"/>
     </menu>
     <menu opened="true" id="projects" description="msg://com.company.timesheets/menu_config.projects.description"
           title="msg://com.company.timesheets/menu_config.projects.title">
         <item view="ts_Client.list" title="msg://com.company.timesheets.view.client/clientListView.title"/>
         <item view="ts_Project.list" title="msg://com.company.timesheets.view.project/projectListView.title"/>
         <item view="ts_TimeEntry.list" title="msg://com.company.timesheets.view.timeentry/timeEntryListView.title"/>
+        <item view="ProgrammaticProjectListView"
+              description="msg://com.company.timesheets/menu_config.ProgrammaticProjectListView.description"
+              title="msg://com.company.timesheets/menu_config.ProgrammaticProjectListView.title"/>
     </menu>
     <menu id="settings" description="msg://com.company.timesheets/menu_config.settings.description"
           title="msg://com.company.timesheets/menu_config.settings.title">
