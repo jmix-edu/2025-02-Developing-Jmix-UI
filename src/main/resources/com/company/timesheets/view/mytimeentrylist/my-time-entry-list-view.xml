@@ -44,7 +44,11 @@
                 <action id="create" type="list_create"/>
                 <action id="edit" type="list_edit"/>
                 <action id="remove" type="list_remove"/>
-                <action id="copy" text="msg://copy.action.text" icon="COPY_O" type="list_itemTracking"/>
+                <action id="copy" type="list_timeEntry_copy">
+                    <properties>
+                        <property name="ownTimeEntry" value="true"/>
+                    </properties>
+                </action>
             </actions>
             <columns resizable="true">
                 <column property="date" autoWidth="true" flexGrow="0"/>
